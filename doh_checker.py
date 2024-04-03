@@ -28,7 +28,7 @@ async def check_json_doh(ip, query_name, timeout=6):
     async with httpx.AsyncClient(verify=False, http2=True) as client:
         try:
             response = await client.get(
-                f"https://{ip}/resolve?", timeout=timeout, 
+                f"https://{ip}/resolve?", timeout=timeout,
                 params={"name": query_name, "type": 1})
 
         except Exception as e:
