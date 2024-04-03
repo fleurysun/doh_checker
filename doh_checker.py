@@ -58,7 +58,7 @@ if __name__ == "__main__":
                 ip, query_name, timeout))
             for item in results:
                 if results[item]:
-                    print(item)
+                    print(ip, item)
     else:
         print("I need at least a IP")
         print("Usage:", sys.argv[0], "ip_to_be_checked")
